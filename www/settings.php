@@ -1,7 +1,7 @@
 <?php
 
   require_once("login.php");
-  require_once("../inc/validurl.inc");
+  require_once("../lib/validurl.php");
   require_once("../inc/initunknowns.inc");
 
   $users=json_decode(file_get_contents("../stor/users.db"));
