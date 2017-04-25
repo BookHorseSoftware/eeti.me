@@ -1,0 +1,48 @@
+body {
+  /* background image from subtlepatterns.com */
+  background-image: url("../assets/crossword.png");
+}
+
+.e-footer {
+  text-align: center;
+  font-size: 12pt;
+}
+
+.e-container {
+  padding-top: 50px;
+}
+
+.e-user {
+  float: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #9d9d9d;
+}
+
+.login {
+  text-align: center;
+}
+
+.tip {
+  font-style: italic;
+  font-size: 8pt;
+}
+
+.realname {
+  color: gray;
+  font-size: 28px;
+}
+
+.version {
+  font-size: 1px;
+}
+
+/* TODO: make prettier */
+table.usertable td {
+  border-bottom: 1px solid black;
+}
+
+.e-logo {
+  height: 50px;
+  width: 145px;
+}
