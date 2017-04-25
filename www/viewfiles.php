@@ -55,7 +55,7 @@
 
     $currNo = 0;
 
-    require("../inc/mimereader.inc");
+    require("../lib/mimereader.php");
 
     for( $currNo = $no; $currNo < $no+20; $currNo++ ){
       if( $currNo < count($files[$user]) ){
