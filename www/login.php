@@ -1,6 +1,6 @@
 <?php
 
-  require_once("../inc/init.inc");
+  require_once("../inc/init.php");
 
   if( @isset($_GET['logout']) ){
     session_start();

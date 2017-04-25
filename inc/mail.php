@@ -2,7 +2,7 @@
 
   require("../lib/PHPMailerAutoload.php");
 
-  require_once("log.inc");
+  require_once("log.php");
 
   function sendMail($to, $subject, $message){
     if( ! EETI_CONFIG_SMTPENABLED ) return;

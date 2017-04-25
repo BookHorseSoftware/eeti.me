@@ -1,6 +1,6 @@
 <?php
-  require_once("header.inc");
-  require_once("footer.inc");
+  require_once("header.php");
+  require_once("footer.php");
 
   function toBool($var){
     return $var=="true";

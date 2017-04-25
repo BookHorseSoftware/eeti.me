@@ -2,7 +2,7 @@
 
   require_once("login.php");
   require_once("../lib/validurl.php");
-  require_once("../inc/initunknowns.inc");
+  require_once("../inc/initunknowns.php");
 
   $users=json_decode(file_get_contents("../stor/users.db"));
   $userprofile=$users[$_SESSION['uid']];

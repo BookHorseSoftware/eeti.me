@@ -15,7 +15,7 @@ else {
 
 }
 
-require_once("func.inc");
+require_once("func.php");
 
 function dbInitializer(){
   if( ! file_exists("../stor/auth.db") ) file_put_contents("../stor/auth.db", "[]");
@@ -24,7 +24,7 @@ function dbInitializer(){
   if( ! file_exists("../stor/cms.db") ) file_put_contents("../stor/cms.db", "[]");
 
   if( ! EETI_INSTALLED || (@isset($_GET['settings']) && @isset($_SESSION['uid']) && accountHasFlag($_SESSION['uid'], "A")) ){
-    require("setup.inc");
+    require("setup.php");
   }
 }
 

@@ -1,7 +1,7 @@
 <?php
   require_once("login.php");
 
-  require_once("../inc/mail.inc");
+  require_once("../inc/mail.php");
 
   function validIP($ip){
     return (preg_match('/^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$/', $ip) == 1) ||

@@ -13,9 +13,9 @@
 
   ini_set("session.use_strict_mode", 1);
 
-  require_once("log.inc");
+  require_once("log.php");
   session_start();
-  
+
   // Regerate session IDs every 5 minutes
   // https://paragonie.com/blog/2015/04/fast-track-safe-and-secure-php-sessions
   if (!isset($_SESSION['canary'])) {
@@ -26,7 +26,7 @@
     session_regenerate_id(true);
     $_SESSION['canary'] = time();
   }
-  
+
   $logUser=updateLogUser($_SESSION);
   elog("eeti2", "Pageview from " . $logUser . ": " . $_SERVER['REQUEST_URI']);
 
@@ -45,7 +45,7 @@
     }
   }
 
-  require("config.inc");
+  require("config.php");
 
   dbInitializer();
 ?>
