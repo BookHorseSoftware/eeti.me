@@ -2,16 +2,8 @@
 
   require_once("../inc/init.inc");
 
-  function session_fully_destroy(){
-    // Invalidate the cookie just in case session.use_strict_mode is still set to 0 for some reason
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time()-42000, $params["path"], $params["domain"], $params["secure"], $params["httponly"]);
-    session_destroy();
-  }
-
   if( @isset($_GET['logout']) ){
     session_start();
-    session_fully_destroy();
     header("Location: index.php?loggedout");
   }
 
@@ -35,6 +27,7 @@
       $res=authenticate($_POST['user'], $_POST['pass']);
 
       if( $res > -1 ){
+		session_regenerate_id(true);
         $_SESSION['user']=$_POST['user'];
         $_SESSION['uid']=$res;
         $_SESSION['ip']=$_SERVER["REMOTE_ADDR"];

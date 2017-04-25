@@ -15,6 +15,18 @@
 
   require_once("log.inc");
   session_start();
+  
+  // Regerate session IDs every 5 minutes
+  // https://paragonie.com/blog/2015/04/fast-track-safe-and-secure-php-sessions
+  if (!isset($_SESSION['canary'])) {
+    session_regenerate_id(true);
+    $_SESSION['canary'] = time();
+  }
+  if ($_SESSION['canary'] < time() - 300) {
+    session_regenerate_id(true);
+    $_SESSION['canary'] = time();
+  }
+  
   $logUser=updateLogUser($_SESSION);
   elog("eeti2", "Pageview from " . $logUser . ": " . $_SERVER['REQUEST_URI']);
 
