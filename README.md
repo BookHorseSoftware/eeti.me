@@ -4,10 +4,10 @@
 ~~Make eeti.me great again~~
 
 ## Table of Contents
-* [Install](#Install)
-* [Maintainers](#Maintainers)
-* [Contribute](#Contribute)
-* [License](#License)
+* [Install](#install)
+* [Maintainers](#maintainers)
+* [Contribute](#contribute)
+* [License](#license)
 
 ## Install
 Upload the contents of this repository to a non-web-accessible directory. `www` should be symlinked to `public_html` (or similar). Make sure the the Web server has access to write to `stor`. Then, open any page and the install will start automatically.
