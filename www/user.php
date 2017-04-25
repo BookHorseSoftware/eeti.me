@@ -12,8 +12,6 @@
     die();
   }
 
-  require_once("../inc/initunknowns.inc");
-
   if( ! @isset($_GET['u']) ){
     header("Location: index.php");
     die();
